@@ -18,15 +18,23 @@ const App = () => {
 
   return (
     <div className="App">
-      <SearchBar hi="Hi Philipp" />
-      <button onClick={() => addSomeHandler({ id: Math.random() , name: Math.random() })}>
-        Click me
-      </button>
-      {dummy && dummy
-        // .filter((comment) => comment.memeid === this.state.currentmeme._id)
-        .map((entries) => (
-          <p>{entries.name}</p>
-        ))}
+      <div className="App-content">
+        <h1 class="App-header">Hello, {dummy && dummy[0].name}</h1>
+        <SearchBar hi="Hi Philipp" />
+      </ div>        
+      <div className="App-content">
+      <button
+          onClick={() =>
+            addSomeHandler({ id: Math.random(), name: Math.random() })
+          }
+        >
+          Click me
+        </button>
+        {dummy &&
+          dummy
+            // .filter((comment) => comment.memeid === this.state.currentmeme._id)
+            .map((entries) => <p>{entries.name}</p>)}
+      </div>
     </div>
   );
 };

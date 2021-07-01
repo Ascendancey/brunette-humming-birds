@@ -5,9 +5,12 @@ import "./SearchBar.css";
 const SearchBar = (props) => {
 
   return (
-    <div className="">
-        <p>{props.hi}</p>
-        <input></input>
+    <div className="SearchBar">
+        {/* <p>{props.hi}</p> */}
+        <input 
+        className="SearchBar-input"
+        ></input>
+        <button className="SearchBar-button">Search</button>
     </div>
   );
 };
