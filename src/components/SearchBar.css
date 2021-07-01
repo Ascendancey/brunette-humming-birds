@@ -1,0 +1,40 @@
+.SearchBar {
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+  /* width: 50rem; */
+  /* margin: 10rem auto; */
+  /* display: inline-block; */
+  width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.SearchBar-input {
+  height: 2rem;
+  width: 75%;
+  margin: 1rem auto;
+
+  /* position: relative;
+  left: 50%;
+  transform: translateX(-50%); */
+}
+
+.SearchBar-button {
+  width: auto;
+  transition-duration: 0.4s;
+  background-color: #008cba;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 1rem;
+  /* position: relative;
+  right: 5%;
+  transform: translateX(-50%); */
+}
+
+.SearchBar-button:hover {
+  background-color: #2ac7fc;
+}
