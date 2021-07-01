@@ -6,7 +6,7 @@ const RankingList = (props) => {
   return (
     <div>
       <div className="App-content">
-        <SearchBar />
+        <SearchBar searchHandler={props.searchHandler} dummy={props.dummy}/>
         <h1>Ranking list</h1>
       </div>
     </div>

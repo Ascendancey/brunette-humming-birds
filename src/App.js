@@ -99,7 +99,11 @@ const App = () => {
               />
             </Route>
             <Route path="/rankinglist">
-              <RankingList />
+              <RankingList
+                dummy={dummy}
+                addSomeHandler={addSomeHandler}
+                searchHandler={searchHandler}
+              />
             </Route>
             <Route path="/details">
               <Details />
