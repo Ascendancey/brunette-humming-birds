@@ -9,7 +9,7 @@ const Home = (props) => {
         <h1 className="App-header">
           Hello, {props.dummy && props.dummy[0].name}
         </h1>
-        <SearchBar/>
+        <SearchBar searchHandler={props.searchHandler}/>
       </div>
       <div className="App-content">
         <button

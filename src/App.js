@@ -22,6 +22,10 @@ const App = () => {
     });
   };
 
+  const searchHandler = () => {
+    console.log("it works");
+  }
+
   return (
     <Router>
       <div className="App">
@@ -47,7 +51,7 @@ const App = () => {
         <div className="App-content">
           <Switch>
             <Route path="/home">
-              <Home dummy={dummy} addSomeHandler={addSomeHandler} />
+              <Home dummy={dummy} addSomeHandler={addSomeHandler} searchHandler={searchHandler}/>
             </Route>
             <Route path="/rankinglist">
               <RankingList />
