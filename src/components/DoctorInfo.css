@@ -1,0 +1,4 @@
+.infotoparea {
+    display: flex;
+    flex-direction: row;
+}

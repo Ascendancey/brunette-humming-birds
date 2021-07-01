@@ -1,0 +1,9 @@
+.docinfotoparea {
+  display: flex;
+  flex-direction: row;
+}
+
+.docName {
+  font-size: 22px;
+  font-weight: bold;
+}
