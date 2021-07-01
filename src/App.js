@@ -10,8 +10,46 @@ import Appointment from "./pages/Appointment";
 import BookingDetails from "./pages/BookingDetails";
 
 const DUMMY_DATA = [
-  { id: "1", name: "PJ" },
-  { id: "2", name: "MP" },
+  {
+    id: 0,
+    name: "Dr. Oliver",
+    propic: "image/DefaultDoctorProfileImage.jpg",
+    specialization: "Cardiologist",
+    language: ["English", "German"],
+    phone: "+49 56326987541",
+    email: "droliver@g.com",
+    location: {
+      country: "Germany",
+      city: "Munich",
+      street: "Kaufingerstr",
+      house: "1a",
+    },
+    selfintro:
+      "Hello, I am Dr. Oliver. xxxxxxxxxx. xxxxxxxxxxxxxx. xxxxxxxxxxxxxxx. xxxxxxxxx.",
+    availablein: 2,
+    price: 100,
+    rating: 4.5,
+  },
+  {
+    id: 1,
+    name: "Dr. Not Oliver",
+    propic: "image/DefaultDoctorProfileImage.jpg",
+    specialization: "Surgeon",
+    language: ["German", "Spanish"],
+    phone: "+49 56326987541",
+    email: "droliver@g.com",
+    location: {
+      country: "Germany",
+      city: "Berlin",
+      street: "Whateverstr",
+      house: "2b",
+    },
+    selfintro:
+      "Hello, I am Dr. Not Oliver. xxxxxxxxxx. xxxxxxxxxxxxxx. xxxxxxxxxxxxxxx. xxxxxxxxx.",
+    availablein: 4,
+    price: 200,
+    rating: 4.1,
+  },
 ];
 
 const App = () => {
@@ -22,9 +60,12 @@ const App = () => {
     });
   };
 
-  const searchHandler = () => {
-    console.log("it works");
-  }
+  const [currentSearch, setCurrentSearch] = useState("");
+  const searchHandler = (enteredData) => {
+    setCurrentSearch(() => {
+      return enteredData;
+    });
+  };
 
   return (
     <Router>
@@ -51,7 +92,11 @@ const App = () => {
         <div className="App-content">
           <Switch>
             <Route path="/home">
-              <Home dummy={dummy} addSomeHandler={addSomeHandler} searchHandler={searchHandler}/>
+              <Home
+                dummy={dummy}
+                addSomeHandler={addSomeHandler}
+                searchHandler={searchHandler}
+              />
             </Route>
             <Route path="/rankinglist">
               <RankingList />

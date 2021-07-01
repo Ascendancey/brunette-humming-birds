@@ -9,7 +9,7 @@ const Home = (props) => {
         <h1 className="App-header">
           Hello, {props.dummy && props.dummy[0].name}
         </h1>
-        <SearchBar searchHandler={props.searchHandler}/>
+        <SearchBar searchHandler={props.searchHandler} dummy={props.dummy}/>
       </div>
       <div className="App-content">
         <button
@@ -22,6 +22,7 @@ const Home = (props) => {
         {props.dummy &&
           props.dummy
             // .filter((comment) => comment.memeid === this.state.currentmeme._id)
+            // .filter((entries) => entries.name === entries.name)
             .map((entries) => <p key={entries.id}>{entries.name}</p>)}
       </div>
     </div>
