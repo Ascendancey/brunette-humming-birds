@@ -9,7 +9,6 @@ import Details from "./pages/Details";
 import Appointment from "./pages/Appointment";
 import BookingDetails from "./pages/BookingDetails";
 
-
 const DUMMY_DATA = [
   { id: "1", name: "PJ" },
   { id: "2", name: "MP" },
@@ -26,27 +25,26 @@ const App = () => {
   return (
     <Router>
       <div className="App">
+        <div className="navBar">
+          <nav className="links">
+            <li>
+              <Link to="/home">Home</Link>
+            </li>
+            <li>
+              <Link to="/rankinglist">Ranking List</Link>
+            </li>
+            <li>
+              <Link to="/details">Details</Link>
+            </li>
+            <li>
+              <Link to="/appointment">Appointment booking</Link>
+            </li>
+            <li>
+              <Link to="/bookingdetails">Booking details</Link>
+            </li>
+          </nav>
+        </div>
         <div className="App-content">
-          <div>
-            <nav>
-              <li>
-                <Link to="/home">Home</Link>
-              </li>
-              <li>
-                <Link to="/rankinglist">Ranking List</Link>
-              </li>
-              <li>
-                <Link to="/details">Details</Link>
-              </li>
-              <li>
-                <Link to="/appointment">Appointment booking</Link>
-              </li>
-              <li>
-                <Link to="/bookingdetails">Booking details</Link>
-              </li>
-            </nav>
-          </div>
-
           <Switch>
             <Route path="/home">
               <Home dummy={dummy} addSomeHandler={addSomeHandler} />

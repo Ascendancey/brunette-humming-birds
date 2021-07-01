@@ -4,7 +4,7 @@ const Appointment = (props) => {
   return (
     <div>
       <div className="App-content">
-        <h1>Details</h1>
+        <h1>Appointment</h1>
       </div>
     </div>
   );

@@ -11,7 +11,7 @@
 .App-content {
   border-radius: 12px;
   text-align: center;
-  margin: 10rem auto;
+  margin: 7rem auto;
   width: 50rem;
   max-width: 95%;
 }
@@ -30,3 +30,32 @@
   color: #61dafb;
 }
 
+.navBar {
+  margin: 2rem auto;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+}
+
+.links {
+height: 0;
+overflow: hidden;
+list-style-type: none;
+font-weight: bold;
+}
+
+/* Media screen size */
+@media screen and (min-width: 768px) {
+  button {
+      display: none;
+  }
+
+  .links {
+      height: auto;
+      display: flex;
+  }
+
+  li {
+      padding: 0 15px;
+  }
+}

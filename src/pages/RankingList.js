@@ -7,7 +7,7 @@ const RankingList = (props) => {
     <div>
       <div className="App-content">
         <SearchBar />
-        <h1>hello</h1>
+        <h1>Ranking list</h1>
       </div>
     </div>
   );
