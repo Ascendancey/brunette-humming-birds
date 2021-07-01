@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
 import "./App.css";
 
-import SearchBar from "./components/SearchBar";
+import Home from "./pages/Home";
 
 const DUMMY_DATA = [
   { id: "1", name: "PJ" },
@@ -14,28 +16,35 @@ const App = () => {
     setDummy((prevState) => {
       return [addition, ...prevState];
     });
+    // console.log(dummy);
   };
 
   return (
-    <div className="App">
-      <div className="App-content">
-        <h1 class="App-header">Hello, {dummy && dummy[0].name}</h1>
-        <SearchBar hi="Hi Philipp" />
-      </ div>        
-      <div className="App-content">
-      <button
-          onClick={() =>
-            addSomeHandler({ id: Math.random(), name: Math.random() })
-          }
-        >
-          Click me
-        </button>
-        {dummy &&
-          dummy
-            // .filter((comment) => comment.memeid === this.state.currentmeme._id)
-            .map((entries) => <p>{entries.name}</p>)}
+    <Router>
+      <div className="App">
+        <div className="App-content">
+          <div>
+            <nav>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/doctordetail">Doctor Detail</Link>
+              </li>
+            </nav>
+          </div>
+
+          <Switch>
+            <Route path="/">
+              <Home dummy={dummy} addSomeHandler={addSomeHandler}/>
+            </Route>
+            <Route path="/doctordetail">
+              {/* <DoctorDetail /> */}
+            </Route>
+          </Switch>
+        </div>
       </div>
-    </div>
+    </Router>
   );
 };
 
