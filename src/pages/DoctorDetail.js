@@ -1,9 +1,9 @@
 import React from 'react';
 
-import "./DoctorDetail.css";
+// import "./DoctorDetail.css";
 
-import DoctorInfo from './components/DoctorInfo';
-import BookCalendar from './components/BookCalendar';
+import DoctorInfo from '../components/DoctorInfo';
+import BookCalendar from '../components/BookCalendar';
 
 const DoctorDetail = (props) => {
   const infodata = {
@@ -18,7 +18,7 @@ const DoctorDetail = (props) => {
   }
 
   return (
-    <div className="">
+    <div className="App-content">
         <h1>Doctor Detail Page</h1>
         <div>
           <DoctorInfo info={infodata} />

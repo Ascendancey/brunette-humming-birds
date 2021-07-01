@@ -81,7 +81,8 @@ function generatecldata(startday) {
   let curdate = new Date(startday)
   for (let i=0; i<7; i++) {    
     curdate.setDate(startday.getDate()+i)
-    let curtimeslot = generatetimslot(curdate, 9, 18)
+    // timeslot of generating data
+    let curtimeslot = generatetimslot(curdate, 9, 15)
     let d = {
       "date": new Date(curdate),
       "timeslot": curtimeslot

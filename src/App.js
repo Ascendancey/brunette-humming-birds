@@ -3,12 +3,10 @@ import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import "./App.css";
-import DoctorDetail from "./DoctorDetail";
-import Home from "./Home";
 
 import Home from "./pages/Home";
 import RankingList from "./pages/RankingList";
-import Details from "./pages/Details";
+import DoctorDetail from "./pages/DoctorDetail";
 import Appointment from "./pages/Appointment";
 import BookingDetails from "./pages/BookingDetails";
 
@@ -89,7 +87,7 @@ const App = () => {
               <RankingList />
             </Route>
             <Route path="/details">
-              <Details />
+              <DoctorDetail />
             </Route>
             <Route path="/appointment">
               <Appointment />
