@@ -4,6 +4,7 @@ import Popup from 'reactjs-popup';
 import "./Timeslot.css";
 
 import AbstractBookInfo from './AbstractBookInfo';
+import BookDetail from './BookDetail';
 
 const Timeslot = (props) => {
   const doctorinfo = props.info
@@ -67,10 +68,23 @@ const Timeslot = (props) => {
 
   const bookeddetail = (close) => {
     return (
-      <div>
-        Booked
+      <div className="modal">
+        <div className="content">
+          <BookDetail doctorinfo={doctorinfo} date={time} message={message} booktype={booktype} />
+        </div>
+        <div className="actions">
+          <button className="button" onClick={()=>{ cancelbooking(); close(); }}>
+            Cancel Booking
+          </button>
+        </div>        
       </div>
     )
+  }
+
+  function cancelbooking() {
+    setbooktype("video")
+    setmessage("")
+    setstatus("empty")
   }
 
   return (
