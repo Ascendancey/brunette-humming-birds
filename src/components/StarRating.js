@@ -11,9 +11,11 @@ const StarRating = (props) => {
            return <FaStar className={styles.StarRating}/>
         })}
         </div>
-        <div className={styles.NumberOfReviewsWrapper}>
-            <p className={styles.NumberOfReviews}>{props.numberOfReviews}</p>{/*Displays the number of reviews, pass it through props*/}
-        </div>
+        {props.numberOfReviews?
+          <div className={styles.NumberOfReviewsWrapper}>
+              <p className={styles.NumberOfReviews}>Review: {props.numberOfReviews}</p>{/*Displays the number of reviews, pass it through props*/}
+          </div>
+        : null}
     </div>
   );
 }

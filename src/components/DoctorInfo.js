@@ -2,6 +2,8 @@ import React from 'react';
 
 import "./DoctorInfo.css";
 
+import StarRating from './StarRating';
+
 const DoctorInfo = (props) => {
   const infodata = props.info
 
@@ -21,8 +23,8 @@ const DoctorInfo = (props) => {
             <div>Address: {infodata.Address}</div>            
           </div>
         </div>
-        <div>
-          Star Rating component
+        <div className="starratingarea">
+          <StarRating numberOfStars={infodata.Starnum} numberOfReviews={infodata.Reviewnum}/>
         </div>
       </div>        
       <div>

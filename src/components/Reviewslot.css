@@ -1,0 +1,37 @@
+.slotarea {
+  display: flex;
+  flex-direction: row;
+  border: black;
+  border-style: solid;
+}
+
+.propicarea {
+  margin: 10px;
+}
+
+.name {
+  width: 80px;
+}
+
+.stararea {
+
+}
+
+.title {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.knowledgestar {
+  display: flex;
+  flex-direction: row;
+}
+
+.helpfulnessstar {
+  display: flex;
+  flex-direction: row;
+}
+
+.content {
+  margin-left: auto;
+}
