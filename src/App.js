@@ -77,16 +77,7 @@ const App = () => {
               <Link to="/home">Home</Link>
             </li>
             <li>
-              <Link to="/rankinglist">Ranking List</Link>
-            </li>
-            <li>
-              <Link to="/details">Details</Link>
-            </li>
-            <li>
               <Link to="/appointment">Appointment booking</Link>
-            </li>
-            <li>
-              <Link to="/bookingdetails">Booking details</Link>
             </li>
           </nav>
         </div>

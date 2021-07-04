@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useLocation } from "react-router-dom";
 
 // import "./DoctorDetail.css";
 
@@ -7,14 +8,22 @@ import BookCalendar from '../components/BookCalendar';
 import Reviewsection from '../components/Reviewsection';
 
 const DoctorDetail = (props) => {
-  const infodata = {
+  const location = useLocation();
+  const [infodata, setinfodata] = useState(location.state.info)
+
+  const infodatatemplate = {
     "Name": "Dr. Oliver",
     "Propic": "image/DefaultDoctorProfileImage.jpg",
     "Specialization": "Cardiologists",
     "Language": "English, German",
     "Phone": "+49 56326987541",
     "Email": "droliver@g.com",
-    "Address": "xxxxxxxxxxx, xxxxxxxxxx, xxxx, Germany",
+    "Address": {
+      "country": "Germany",
+      "city": "Munich",
+      "street": "Kaufingerstr",
+      "house": "1a",
+    },
     "Selfintro": "Hello, I am Dr. Oliver. xxxxxxxxxx. xxxxxxxxxxxxxx. xxxxxxxxxxxxxxx. xxxxxxxxx.",
     "Starnum": "4",
     "Reviewnum": "3"

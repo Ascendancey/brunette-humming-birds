@@ -1,0 +1,14 @@
+.abstactdoctor {
+  display: flex;
+  flex-direction: row;
+  width: 40%;
+  justify-content: space-around;
+}
+
+.propic {
+  margin: 10px;
+}
+
+.ratingarea {
+  margin: auto;
+}

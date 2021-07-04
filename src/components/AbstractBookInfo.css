@@ -1,9 +1,11 @@
 .docinfotoparea {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
 }
 
 .docName {
   font-size: 22px;
   font-weight: bold;
+  margin-bottom: 10px;
 }

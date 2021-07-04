@@ -12,7 +12,7 @@ const AbstractBookInfo = (props) => {
       <h2>{datestring}</h2>
       <div className="docinfotoparea">
         <div>
-          <img height="130" src={doctorinfo.Propic} alt="ProfilePic" />
+          <img height="110" src={doctorinfo.Propic} alt="ProfilePic" />
         </div>
         <div>
           <div className="docName">{doctorinfo.Name}</div>

@@ -6,6 +6,7 @@ import StarRating from './StarRating';
 
 const DoctorInfo = (props) => {
   const infodata = props.info
+  const addstring = formataddress(infodata.Address)
 
   return (
     <div>
@@ -20,7 +21,7 @@ const DoctorInfo = (props) => {
             <div>Language: {infodata.Language}</div>
             <div>Phone: {infodata.Phone}</div>
             <div>Email: {infodata.Email}</div>
-            <div>Address: {infodata.Address}</div>            
+            <div>Address: {addstring}</div>
           </div>
         </div>
         <div className="starratingarea">
@@ -33,5 +34,18 @@ const DoctorInfo = (props) => {
     </div>
   );
 };
+
+function formataddress(address) {
+  /*
+  "Address": {
+    "country": "Germany",
+    "city": "Munich",
+    "street": "Kaufingerstr",
+    "house": "1a",
+  }
+  */
+  let addstring = address.house + ", " + address.street + ", " + address.city + ", " + address.country
+  return addstring
+}
 
 export default DoctorInfo;
