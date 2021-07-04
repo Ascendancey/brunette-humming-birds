@@ -1,0 +1,14 @@
+.calendarbar {
+  display: flex;
+  flex-direction: row;
+}
+
+.calandarrow {
+  display: flex;
+  flex-direction: row;
+}
+
+.timeslots {
+  display: flex;
+  flex-direction: row;
+}
