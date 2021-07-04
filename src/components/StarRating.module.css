@@ -1,12 +1,12 @@
 .StarRatingWrapper{
-    float: left;
+    
     padding-right: 10px;
 }
 .StarRating {
     color: #FFD700;
 }
 .NumberOfReviewsWrapper {
-    float: left;
+    
 }
 .NumberOfReviews {
     margin: 0;
