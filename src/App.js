@@ -68,35 +68,6 @@ const App = () => {
     });
   };
 
-// <<<<<<< Details-Page
-
-// function App() {
-//   return (
-//     <Router>
-//       <div className="App">
-//         <h1>Platform Name</h1>
-//         <SearchBar />
-//       </div>
-//       <div>
-//         <nav>
-//           <li>
-//             <Link to="/home">Home</Link>
-//           </li>
-//           <li>
-//             <Link to="/doctordetail">Doctor Detail</Link>
-//           </li>
-//         </nav>
-//       </div>
-
-//       <Switch>
-//         <Route path="/home">
-//           <Home />
-//         </Route>
-//         <Route path="/doctordetail">
-//           <DoctorDetail />
-//         </Route>
-//       </Switch>
-// =======
   return (
     <Router>
       <div className="App">
