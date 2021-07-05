@@ -7,8 +7,8 @@ const StarRating = (props) => {
   return (
     <div> 
         <div className={styles.StarRatingWrapper}>
-            {[...Array(Number(props.numberOfStars))].map((star) => {//Displays the number of stars that you want to display. Just pass the number as props
-           return <FaStar className={styles.StarRating}/>
+            {[...Array(Number(props.numberOfStars))].map((star, index) => {//Displays the number of stars that you want to display. Just pass the number as props
+           return <FaStar className={styles.StarRating} key={index}/>
         })}
         </div>
         {props.numberOfReviews?

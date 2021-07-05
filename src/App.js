@@ -68,6 +68,11 @@ const App = () => {
     });
   };
 
+  const [storedappointments, setappointments] = useState(null);
+  function storeappointments(data) {
+    setappointments(data)
+  }
+
   return (
     <Router>
       <div className="App">
@@ -77,16 +82,7 @@ const App = () => {
               <Link to="/home">Home</Link>
             </li>
             <li>
-              <Link to="/rankinglist">Ranking List</Link>
-            </li>
-            <li>
-              <Link to="/details">Details</Link>
-            </li>
-            <li>
               <Link to="/appointment">Appointment booking</Link>
-            </li>
-            <li>
-              <Link to="/bookingdetails">Booking details</Link>
             </li>
           </nav>
         </div>
@@ -110,7 +106,10 @@ const App = () => {
               <DoctorDetail />
             </Route>
             <Route path="/appointment">
-              <Appointment />
+              <Appointment
+                storedappointments = {storedappointments}
+                storeappfunc = {storeappointments}
+              />
             </Route>
             <Route path="/bookingdetails">
               <BookingDetails />

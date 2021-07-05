@@ -1,8 +1,11 @@
 import React, { useState } from "react";
+import { useHistory } from 'react-router-dom';
 
 import "./SearchBar.css";
 
 const SearchBar = (props) => {
+  const history = useHistory();
+  
   const [inputValue, setInputValue] = useState({
     text: "",
     language: "English",
@@ -21,6 +24,10 @@ const SearchBar = (props) => {
   const clickHandler = (event) => {
     console.log(inputValue);
     props.searchHandler(inputValue);
+    history.push({
+      pathname: '/rankinglist',
+      state: {currentSearch: inputValue}
+    })
   };
 
   const dummy = props.dummy;

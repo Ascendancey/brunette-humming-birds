@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Popup from 'reactjs-popup';
+import { useHistory } from 'react-router-dom';
 
 import "./Timeslot.css";
 
@@ -7,6 +8,8 @@ import AbstractBookInfo from './AbstractBookInfo';
 import BookDetail from './BookDetail';
 
 const Timeslot = (props) => {
+  const history = useHistory();
+
   const doctorinfo = props.info
   const time = props.datetime
   const [status, setstatus] = useState(props.status)
@@ -25,6 +28,15 @@ const Timeslot = (props) => {
 
   function confirmbooking() {
     setstatus("booked")
+    history.push({
+      pathname: '/appointment',
+      state: {
+       "doctorinfo": doctorinfo,
+       "time": time,
+       "message": message,
+       "booktype": booktype
+      }
+    })
   }
   
   const makebooing = (close) => {
