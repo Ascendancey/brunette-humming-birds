@@ -49,7 +49,7 @@ const RankingList = (props) => {
     }
   ]
 
-  const [ranklist, setranklist] = useState(arrangelist(absdoctortemplate))
+  const [ranklist, setranklist] = useState(absdoctortemplate)
 
   return (
     <div>
@@ -59,7 +59,7 @@ const RankingList = (props) => {
       <div>
         <h1>Ranking list</h1>
         <div style={{display:"flex", flexDirection: "column", alignItems:"center"}}>
-          {ranklist}
+          {arrangelist(ranklist)}
         </div>
         
       </div>
