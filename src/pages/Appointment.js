@@ -11,23 +11,23 @@ const Appointment = (props) => {
   const appointmenttemplate = [
     {
       doctorinfo: {
-        "Name": "Dr. Oliver",
+        "Name": "Dr. Sam",
         "Propic": "image/DefaultDoctorProfileImage.jpg",
         "Specialization": "Cardiologists",
         "Language": "English, German",
-        "Phone": "+49 56326987541",
+        "Phone": "+49 45236985478",
         "Email": "droliver@g.com",
         "Address": {
           "country": "Germany",
           "city": "Munich",
-          "street": "Kaufingerstr",
+          "street": "JonehStr",
           "house": "1a",
         },
         "Selfintro": "Hello, I am Dr. Oliver. xxxxxxxxxx. xxxxxxxxxxxxxx. xxxxxxxxxxxxxxx. xxxxxxxxx.",
         "Starnum": "4",
         "Reviewnum": "3"
       },
-      time: new Date(Date.now() - 86400000),
+      time: new Date(Date.now() - 86400000*7),
       message: "random message",
       booktype: "video" // "video", "audio", "clinic"
     },
@@ -35,27 +35,28 @@ const Appointment = (props) => {
       doctorinfo: {
         "Name": "Dr. Ben",
         "Propic": "image/DefaultDoctorProfileImage.jpg",
-        "Specialization": "Cardiologists",
+        "Specialization": "Nephrology",
         "Language": "English, German",
         "Phone": "+49 87453987541",
         "Email": "drBen@g.com",
         "Address": {
           "country": "Germany",
           "city": "Munich",
-          "street": "Kaufingerstr",
-          "house": "2a",
+          "street": "Kau",
+          "house": "9a",
         },
         "Selfintro": "Hello, I am Dr. Ben. xxxxxxxxxx. xxxxxxxxxxxxxx. xxxxxxxxxxxxxxx. xxxxxxxxx.",
         "Starnum": "5",
         "Reviewnum": "10"
       },
-      time: new Date(Date.now() - 86400000*3),
+      time: new Date(Date.now() - 86400000*10),
       message: "random message 222",
       booktype: "video" // "video", "audio", "clinic"
     }
   ]
 
-  const [applist, setapplist] = useState(null)  
+  const [applist, setapplist] = useState(null)
+  const [historyapplist, sethistoryapplist] = useState(appointmenttemplate)
 
   useEffect(() => {
     if (props.storedappointments !== null) {
@@ -67,8 +68,8 @@ const Appointment = (props) => {
       setapplist(updatelist)
     }
     else {
-      let updatelist = [... appointmenttemplate]
-      if (location.state) {        
+      let updatelist = []
+      if (location.state) {
         updatelist.push(location.state)        
       }
       props.storeappfunc(updatelist)
@@ -96,6 +97,10 @@ const Appointment = (props) => {
         <h1>Appointment</h1>
         <div style={{display:"flex", flexDirection:"column", alignItems:"center"}}>
           {applist !== null? appointmentlist(applist, cancelbooking) : null}
+        </div>
+        <h1>Appointment History</h1>
+        <div style={{display:"flex", flexDirection:"column", alignItems:"center"}}>
+          {historyapplist !== null? appointmentlist(historyapplist, cancelbooking) : null}
         </div>
       </div>
     </div>

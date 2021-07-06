@@ -14,7 +14,7 @@ const DoctorDetail = (props) => {
   const infodatatemplate = {
     "Name": "Dr. Oliver",
     "Propic": "image/DefaultDoctorProfileImage.jpg",
-    "Specialization": "Cardiologists",
+    "Specialization": "General Practitioner",
     "Language": "English, German",
     "Phone": "+49 56326987541",
     "Email": "droliver@g.com",

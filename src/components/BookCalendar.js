@@ -36,11 +36,11 @@ const BookCalendar = (props) => {
       {/* Head bar of calendar */}
       <div className="calendarbar">
         <button className="chleftbut" onClick={dateback}>
-          left
+          <img height="15" src={"image/leftarrow.png"} alt="Leftarrow" />
         </button>
         <div>Booking {currentyear}</div>
         <button className="chrightbut"  onClick={dateforward}>
-          right
+          <img height="15" src={"image/rightarrow.png"} alt="Rightarrow" />
         </button>
       </div>
       {/* Calendar Table */}
@@ -82,7 +82,7 @@ function generatecldata(startday) {
   for (let i=0; i<7; i++) {    
     curdate.setDate(startday.getDate()+i)
     // timeslot of generating data
-    let curtimeslot = generatetimslot(curdate, 9, 15)
+    let curtimeslot = generatetimslot(curdate, 9, 16)
     let d = {
       "date": new Date(curdate),
       "timeslot": curtimeslot

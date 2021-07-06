@@ -10,9 +10,9 @@ const SearchBar = (props) => {
     text: "",
     language: "English",
     city: "Munich",
-    specialization: "Cardiologist",
-    price: 100,
-    rating: 4.5,
+    specialization: "General Practitioner",
+    price: 20,
+    rating: 5,
     availability: 2,
   });
   const inputHandler = (event) => {
