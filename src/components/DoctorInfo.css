@@ -1,6 +1,9 @@
 .infotoparea {
     display: flex;
     flex-direction: row;
+    text-align: left;
+    margin-left: 70px;
+    justify-content: space-evenly;
 }
 
 .starratingarea {

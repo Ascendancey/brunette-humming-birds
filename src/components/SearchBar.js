@@ -82,6 +82,9 @@ const SearchBar = (props) => {
       <button className="SearchBar-button" onClick={clickHandler}>
         Search
       </button>
+
+      <label>Language:</label>
+
       <select
       onChange = {setInputLang}
       >
@@ -89,6 +92,9 @@ const SearchBar = (props) => {
           return <option key={i}> {item} </option>;
         })}
       </select>
+
+      <label>City:</label>
+
       <select
       onChange={setInputCity}
       >
@@ -97,15 +103,18 @@ const SearchBar = (props) => {
         })}
       </select>
 
-      <select
+        <label>Specialist:</label>
+        <select
       onChange={setInputSpec}
       >
         {props.dummy.map((item, i) => {
           return <option key={i}> {item.specialization} </option>;
         })}
       </select>
+        <br/><br/>
       <div>
         <label>Price range:</label>
+
         <select
         onChange={setInputPrice}
         >
@@ -121,9 +130,10 @@ const SearchBar = (props) => {
             return <option key={i}> {item.rating} </option>;
           })}
         </select>
-      </div>
-      <div>
-        <label>Available in (hours):</label>
+
+
+
+          <label>Available in (hours):</label>
         <select
         onChange={setInputAvailability}
         >

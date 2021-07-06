@@ -36,11 +36,11 @@ const BookCalendar = (props) => {
       {/* Head bar of calendar */}
       <div className="calendarbar">
         <button className="chleftbut" onClick={dateback}>
-          left
+          &lt;
         </button>
         <div>Booking {currentyear}</div>
         <button className="chrightbut"  onClick={dateforward}>
-          right
+          &gt;
         </button>
       </div>
       {/* Calendar Table */}

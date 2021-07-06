@@ -6,6 +6,7 @@
   width: 40rem;
   margin-left: auto;
   margin-right: auto;
+  height: 10.5rem;
 }
 
 .SearchBar-input {
@@ -36,14 +37,14 @@
 }
 
 select {
-  width: 120px;
+  width: auto;
   height: 30px;
   border: 1px solid #1c87c9;
   font-size: 18px;
   color: #1c87c9;
   background-color: white;
   border-radius: 5px;
-  /* box-shadow: 4px 4px #1c87c9; */
+  box-shadow: 4px 4px #1c87c9;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }

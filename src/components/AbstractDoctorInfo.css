@@ -3,6 +3,9 @@
   flex-direction: row;
   width: 40%;
   justify-content: space-around;
+  margin-bottom: 5px;
+  text-align: left;
+
 }
 
 .propic {

@@ -23,7 +23,7 @@ const AbstractDoctorInfo = (props) => {
         <img className="propic" height="80" src={infodata.Propic} alt="ProfilePic" />
       </div>
       <div>
-        <h2>{infodata.Name}</h2>        
+        <h2>{infodata.Name}</h2>
         <div>
           <div>{infodata.Specialization}</div>
           <div>{infodata.Language}</div>
