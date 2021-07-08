@@ -8,7 +8,7 @@ const AbstractBookInfo = (props) => {
   const datestring = formatDatestring(date)
 
   return(
-    <div>
+    <div className="">
       <h2>{datestring}</h2>
       <div className="docinfotoparea">
         <div>
