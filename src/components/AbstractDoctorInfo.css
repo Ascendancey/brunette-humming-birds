@@ -1,8 +1,13 @@
 .abstactdoctor {
   display: flex;
   flex-direction: row;
-  width: 40%;
+  width:90%;
   justify-content: space-around;
+  background-color: rgb(247, 253, 255);
+  margin: 0.5rem auto;
+  border-radius: 8px;
+  border-color: white;
+  color: #008cba;
 }
 
 .propic {

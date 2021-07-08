@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { useHistory } from 'react-router-dom';
+import { useHistory } from "react-router-dom";
 
 import "./SearchBar.css";
 
 const SearchBar = (props) => {
   const history = useHistory();
-  
+
   const [inputValue, setInputValue] = useState({
     text: "",
     language: "English",
@@ -17,7 +17,7 @@ const SearchBar = (props) => {
   });
   const inputHandler = (event) => {
     setInputValue((prevState) => {
-      return {...prevState, text: event.target.value};
+      return { ...prevState, text: event.target.value };
     });
   };
 
@@ -25,9 +25,9 @@ const SearchBar = (props) => {
     console.log(inputValue);
     props.searchHandler(inputValue);
     history.push({
-      pathname: '/rankinglist',
-      state: {currentSearch: inputValue}
-    })
+      pathname: "/rankinglist",
+      state: { currentSearch: inputValue },
+    });
   };
 
   const dummy = props.dummy;
@@ -41,38 +41,38 @@ const SearchBar = (props) => {
 
   const setInputLang = (event) => {
     setInputValue((prevState) => {
-      return {...prevState, language: event.target.value};
-    })
+      return { ...prevState, language: event.target.value };
+    });
   };
 
   const setInputCity = (event) => {
     setInputValue((prevState) => {
-      return {...prevState, city: event.target.value};
-    })
+      return { ...prevState, city: event.target.value };
+    });
   };
 
   const setInputSpec = (event) => {
     setInputValue((prevState) => {
-      return {...prevState, specialization: event.target.value};
-    })
+      return { ...prevState, specialization: event.target.value };
+    });
   };
 
   const setInputPrice = (event) => {
     setInputValue((prevState) => {
-      return {...prevState, price: event.target.value};
-    })
+      return { ...prevState, price: event.target.value };
+    });
   };
 
   const setInputRating = (event) => {
     setInputValue((prevState) => {
-      return {...prevState, rating: event.target.value};
-    })
+      return { ...prevState, rating: event.target.value };
+    });
   };
 
   const setInputAvailability = (event) => {
     setInputValue((prevState) => {
-      return {...prevState, availability: event.target.value};
-    })
+      return { ...prevState, availability: event.target.value };
+    });
   };
 
   return (
@@ -82,41 +82,31 @@ const SearchBar = (props) => {
       <button className="SearchBar-button" onClick={clickHandler}>
         Search
       </button>
-      <select
-      onChange = {setInputLang}
-      >
+      <select onChange={setInputLang}>
         {uniqueLangs.map((item, i) => {
           return <option key={i}> {item} </option>;
         })}
       </select>
-      <select
-      onChange={setInputCity}
-      >
+      <select onChange={setInputCity}>
         {props.dummy.map((item, i) => {
           return <option key={i}> {item.location.city} </option>;
         })}
       </select>
 
-      <select
-      onChange={setInputSpec}
-      >
+      <select onChange={setInputSpec}>
         {props.dummy.map((item, i) => {
           return <option key={i}> {item.specialization} </option>;
         })}
       </select>
       <div>
         <label>Price range:</label>
-        <select
-        onChange={setInputPrice}
-        >
+        <select onChange={setInputPrice}>
           {props.dummy.map((item, i) => {
             return <option key={i}> {item.price} </option>;
           })}
         </select>
         <label>Rating:</label>
-        <select
-        onChange={setInputRating}
-        >
+        <select onChange={setInputRating}>
           {props.dummy.map((item, i) => {
             return <option key={i}> {item.rating} </option>;
           })}
@@ -124,17 +114,13 @@ const SearchBar = (props) => {
       </div>
       <div>
         <label>Available in (hours):</label>
-        <select
-        onChange={setInputAvailability}
-        >
+        <select onChange={setInputAvailability}>
           {props.dummy.map((item, i) => {
             return <option key={i}> {item.availablein} </option>;
           })}
         </select>
       </div>
-      <div>
-
-      </div>
+      <div></div>
     </div>
   );
 };

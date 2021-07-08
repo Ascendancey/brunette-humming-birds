@@ -70,21 +70,29 @@ const App = () => {
 
   const [storedappointments, setappointments] = useState(null);
   function storeappointments(data) {
-    setappointments(data)
+    setappointments(data);
   }
 
   return (
     <Router>
       <div className="App">
         <div className="navBar">
-          <nav className="links">
+        <Link to="/home"><img className="userImage" src="../image/prodoctor_logo.png" />
+          </Link>
+          {/* <nav className="links">
             <li>
               <Link to="/home">Home</Link>
             </li>
             <li>
               <Link to="/appointment">Appointment booking</Link>
             </li>
-          </nav>
+          </nav> */}
+          <div className="user">
+          <label className="helloUser">Hello, {dummy && dummy[0].name}</label>
+          <Link to="/appointment">
+            <img className="userImage" src="../image/caticon.png" /></Link>
+            
+          </div>
         </div>
         <div className="App-content">
           <Switch>
@@ -107,8 +115,8 @@ const App = () => {
             </Route>
             <Route path="/appointment">
               <Appointment
-                storedappointments = {storedappointments}
-                storeappfunc = {storeappointments}
+                storedappointments={storedappointments}
+                storeappfunc={storeappointments}
               />
             </Route>
             <Route path="/bookingdetails">

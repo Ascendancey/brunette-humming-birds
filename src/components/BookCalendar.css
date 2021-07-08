@@ -1,14 +1,26 @@
+.calendar {
+  justify-content: space-around;
+  align-items: center;
+}
+
 .calendarbar {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0.5rem auto;
 }
 
 .calandarrow {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .timeslots {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }

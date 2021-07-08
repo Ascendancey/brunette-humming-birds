@@ -32,7 +32,7 @@ const BookCalendar = (props) => {
   }
 
   return (
-    <div className="">
+    <div className="calendar">
       {/* Head bar of calendar */}
       <div className="calendarbar">
         <button className="chleftbut" onClick={dateback}>

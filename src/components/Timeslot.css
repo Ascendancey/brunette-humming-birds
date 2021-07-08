@@ -1,13 +1,15 @@
 .emptybutton {
-    background-color: grey;
+    background-color: green;
+    color: white;
 }
 
 .occupybutton {
     background-color: red;
+    color: white;
 }
 
 .bookedbutton {
-    background-color: green;
+    background-color: springgreen;
 }
 
 .popuparea {

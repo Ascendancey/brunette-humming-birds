@@ -91,14 +91,12 @@ const Appointment = (props) => {
   }
 
   return (
-    <div>
       <div className="App-content">
-        <h1>Appointment</h1>
-        <div style={{display:"flex", flexDirection:"column", alignItems:"center"}}>
+        <h1>Your appointments</h1>
+        <div>
           {applist !== null? appointmentlist(applist, cancelbooking) : null}
         </div>
       </div>
-    </div>
   );
 };
 
