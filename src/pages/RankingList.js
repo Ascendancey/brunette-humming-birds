@@ -52,12 +52,10 @@ const RankingList = (props) => {
   const [ranklist, setranklist] = useState(absdoctortemplate)
 
   return (
-    <div>
-      <div className="App-content">
+    <div className="App-content">
         <SearchBar searchHandler={props.searchHandler} dummy={props.dummy}/>
-      </div>
       <div>
-        <h1>Ranking list</h1>
+        {/* <h1>Ranking list</h1> */}
         <div style={{display:"flex", flexDirection: "column", alignItems:"center"}}>
           {arrangelist(ranklist)}
         </div>

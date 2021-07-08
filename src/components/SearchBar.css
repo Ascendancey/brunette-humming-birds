@@ -1,11 +1,14 @@
 .SearchBar {
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+  /* box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25); */
   /* width: 50rem; */
   /* margin: 10rem auto; */
   /* display: inline-block; */
   width: 40rem;
   margin-left: auto;
   margin-right: auto;
+  margin: 1rem auto;
+  border-radius: 12px;
+  position: relative;
 }
 
 .SearchBar-input {
@@ -44,6 +47,7 @@ select {
   background-color: white;
   border-radius: 5px;
   /* box-shadow: 4px 4px #1c87c9; */
+  margin: 0.5rem auto;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }
