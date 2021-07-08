@@ -5,6 +5,8 @@ import Popup from 'reactjs-popup';
 import AbstractBookInfo from '../components/AbstractBookInfo';
 import BookDetail from '../components/BookDetail';
 
+import "../components/AbstractBookInfo.css";
+
 const Appointment = (props) => {
   const location = useLocation();
 
@@ -114,7 +116,7 @@ function appointmentslot(data, cancelbooking) {
   return(
     <Popup key={data.time}
       trigger = {
-        <button className="appointmentbox" >
+        <button className="abstactdoctor" >
           <AbstractBookInfo date={data.time} info={data.doctorinfo} />
         </button>
       }
