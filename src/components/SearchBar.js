@@ -75,51 +75,67 @@ const SearchBar = (props) => {
     });
   };
 
+  const [isFilters, setFilters] = useState(false);
+
+  const showFilters = () => {
+    setFilters(true);
+  };
+
+  const hideFilters = () => {
+    setFilters(false);
+  };
+
   return (
     <div className="SearchBar">
-      {/* <p>{inputValue}</p> */}
       <input className="SearchBar-input" onChange={inputHandler}></input>
       <button className="SearchBar-button" onClick={clickHandler}>
         Search
       </button>
-      <select onChange={setInputLang}>
-        {uniqueLangs.map((item, i) => {
-          return <option key={i}> {item} </option>;
-        })}
-      </select>
-      <select onChange={setInputCity}>
-        {props.dummy.map((item, i) => {
-          return <option key={i}> {item.location.city} </option>;
-        })}
-      </select>
+      {!isFilters && (
+        // <button onClick={showFilters}>Show filters</button>
+        <img className="userImage" onClick={showFilters} src="../image/expand.png" />
+      )}
+      {isFilters && (
+        <div>
+          <select onChange={setInputLang}>
+            {uniqueLangs.map((item, i) => {
+              return <option key={i}> {item} </option>;
+            })}
+          </select>
+          <select onChange={setInputCity}>
+            {props.dummy.map((item, i) => {
+              return <option key={i}> {item.location.city} </option>;
+            })}
+          </select>
+          <select onChange={setInputSpec}>
+            {props.dummy.map((item, i) => {
+              return <option key={i}> {item.specialization} </option>;
+            })}
+          </select>
+          <label>Price range:</label>
+          <select onChange={setInputPrice}>
+            {props.dummy.map((item, i) => {
+              return <option key={i}> {item.price} </option>;
+            })}
+          </select>
+          <label>Rating:</label>
+          <select onChange={setInputRating}>
+            {props.dummy.map((item, i) => {
+              return <option key={i}> {item.rating} </option>;
+            })}
+          </select>
 
-      <select onChange={setInputSpec}>
-        {props.dummy.map((item, i) => {
-          return <option key={i}> {item.specialization} </option>;
-        })}
-      </select>
-      <div>
-        <label>Price range:</label>
-        <select onChange={setInputPrice}>
-          {props.dummy.map((item, i) => {
-            return <option key={i}> {item.price} </option>;
-          })}
-        </select>
-        <label>Rating:</label>
-        <select onChange={setInputRating}>
-          {props.dummy.map((item, i) => {
-            return <option key={i}> {item.rating} </option>;
-          })}
-        </select>
-      </div>
-      <div>
-        <label>Available in (hours):</label>
-        <select onChange={setInputAvailability}>
-          {props.dummy.map((item, i) => {
-            return <option key={i}> {item.availablein} </option>;
-          })}
-        </select>
-      </div>
+          <label>Available in (hours):</label>
+          <select onChange={setInputAvailability}>
+            {props.dummy.map((item, i) => {
+              return <option key={i}> {item.availablein} </option>;
+            })}
+          </select>
+          <br />
+          <img className="userImage" onClick={hideFilters} src="../image/expand_upside.png" />
+        </div>
+      )}
+
       <div></div>
     </div>
   );
