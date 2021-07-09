@@ -79,22 +79,15 @@ const App = () => {
         <div className="navBar">
         <Link to="/home"><img className="userImage" src="../image/prodoctor_logo.png" />
           </Link>
-          {/* <nav className="links">
-            <li>
-              <Link to="/home">Home</Link>
-            </li>
-            <li>
-              <Link to="/appointment">Appointment booking</Link>
-            </li>
-          </nav> */}
           <div className="user">
           <label className="helloUser">Hello, {dummy && dummy[0].name}</label>
           <Link to="/appointment">
             <img className="userImage" src="../image/caticon.png" /></Link>
-            
           </div>
         </div>
-        <div className="App-content">
+        {/* <div 
+        // className="App-content"
+        > */}
           <Switch>
             <Route path="/home">
               <Home
@@ -123,7 +116,7 @@ const App = () => {
               <BookingDetails />
             </Route>
           </Switch>
-        </div>
+        {/* </div> */}
       </div>
     </Router>
   );

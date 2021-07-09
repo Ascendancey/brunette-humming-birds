@@ -96,7 +96,7 @@ const SearchBar = (props) => {
         <img className="userImage" onClick={showFilters} src="../image/expand.png" />
       )}
       {isFilters && (
-        <div>
+        <div className="SearchBar-filters">
           <select onChange={setInputLang}>
             {uniqueLangs.map((item, i) => {
               return <option key={i}> {item} </option>;

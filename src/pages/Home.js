@@ -4,7 +4,10 @@ import SearchBar from "../components/SearchBar";
 
 const Home = (props) => {
   return (
-        <SearchBar searchHandler={props.searchHandler} dummy={props.dummy} > </SearchBar>
+    <div className="App-content-middle">
+      <SearchBar searchHandler={props.searchHandler} dummy={props.dummy} > </SearchBar>
+    </div>
+        
   );
 };
 

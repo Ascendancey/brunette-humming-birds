@@ -38,6 +38,13 @@
   background-color: #2ac7fc;
 }
 
+.SearchBar-filters {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
 select {
   width: 120px;
   height: 30px;
