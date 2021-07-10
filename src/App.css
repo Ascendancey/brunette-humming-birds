@@ -129,5 +129,5 @@
 a {
   color: white;
   text-decoration: none;
-  border-style: none !important;
+  outline : none;
 }
