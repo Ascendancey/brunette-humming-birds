@@ -15,6 +15,7 @@ const Timeslot = (props) => {
   const [status, setstatus] = useState(props.status)
   const [booktype, setbooktype] = useState("video")
   const [message, setmessage] = useState("")
+  const [upfile, setupfile] = useState(null)
   const timedisplay = time.toLocaleTimeString([], { hour12: false, hour: '2-digit', minute: '2-digit' })
   let btn_class = statuscolor(status)
 
@@ -26,7 +27,13 @@ const Timeslot = (props) => {
     setmessage(event.target.value)
   }
 
+  function onfileupload(event) {
+    //console.log(event.target.files)
+    setupfile(event.target.files)
+  }
+
   function confirmbooking() {
+    const filename = filecheck() // return file names and upload files 
     setstatus("booked")
     history.push({
       pathname: '/appointment',
@@ -34,9 +41,26 @@ const Timeslot = (props) => {
        "doctorinfo": doctorinfo,
        "time": time,
        "message": message,
-       "booktype": booktype
+       "booktype": booktype,
+       "filename": filename,
+       "notification": 1 // Hard notification for demo purpose
       }
     })
+  }
+
+  function filecheck() {    
+    let filename = []
+    if (upfile !== null) {
+      for (let i=0; i<upfile.length; i++) {
+        filename.push(upfile[i].name)
+      }
+      if (upfile !== null) {
+        const data = new FormData() 
+        data.append('file', upfile)
+        //console.log(data)
+      }
+    }
+    return filename
   }
   
   const makebooing = (close) => {
@@ -62,8 +86,13 @@ const Timeslot = (props) => {
             <h3>Message</h3>
             <textarea value={message} onChange={writemessage} rows="5" cols="40" />
           </div>
-          {/* Comfirm Cancel button */}
+          {/* Upload File */}
           <div>
+            <h3>Upload File</h3>
+            <input type="file" name="file" onChange={onfileupload} multiple />
+          </div>
+          {/* Comfirm Cancel button */}
+          <div className="buttonarea">
             {/* Confirm button */}
             <button className="button" onClick={()=>{ confirmbooking(); close(); }}>
               Confirm
