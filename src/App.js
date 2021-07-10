@@ -10,6 +10,8 @@ import DoctorDetail from "./pages/DoctorDetail";
 import Appointment from "./pages/Appointment";
 import BookingDetails from "./pages/BookingDetails";
 
+import Popup from 'reactjs-popup';
+
 const DUMMY_DATA = [
   {
     id: 0,
@@ -81,10 +83,33 @@ const App = () => {
           </Link>
           <div className="user">
           <label className="helloUser">Hello, {dummy && dummy[0].name}</label>
-          <Link to="/appointment">
-            <img className="userImage" src="../image/caticon.png" /></Link>
+
+            <Popup
+                trigger={<div className="menu-item"> <img className="userImage" src="../image/caticon.png" /> </div>}
+                position="bottom right"
+                on="hover"
+                closeOnDocumentClick
+                mouseLeaveDelay={300}
+                mouseEnterDelay={0}
+                contentStyle={{ padding: '0px', border: 'none' }}
+                arrow={false}
+
+            >
+              <div className="menu">
+                <div className="menu-item"> View profile</div>
+                <div className="menu-item"><Link to="/appointment"> My appointments</Link></div>
+                <div className="menu-item"> Settings</div>
+              </div>
+            </Popup>
+
           </div>
         </div>
+
+
+
+
+
+
         {/* <div 
         // className="App-content"
         > */}

@@ -58,6 +58,7 @@
   overflow: hidden;
   list-style-type: none;
   font-weight: bold;
+
 }
 
 .user {
@@ -75,7 +76,7 @@
 .userImage {
   /* border-radius: 50%; */
   height: 30px;
-  margin-left: 1rem;
+  /*margin-left: 1rem; */
 }
 
 /* Media screen size */
@@ -87,13 +88,46 @@
   .links {
     height: auto;
     display: flex;
+
   }
 
   li {
     padding: 0 15px;
+
   }
 }
 
 .appointmentbox {
   width: 50%;
+}
+.menu {
+  width: 156px;
+  display: flex;
+  flex-direction: column;
+  background: #008cba;
+  border-radius: 12px;
+
+
+}
+.menu-item {
+  cursor: pointer;
+  padding: 5px;
+  height: 28px;
+  color: #ECEFF1;
+  transition-duration: 0.4s;
+  border-radius: 12px;
+  text-align: center;
+
+
+
+}
+.menu-item:hover {
+  color: white;
+  background: #2ac7fc;
+
+}
+a {
+  color: white;
+  text-decoration: none;
+  outline : none;
 }
