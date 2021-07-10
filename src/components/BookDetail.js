@@ -73,6 +73,7 @@ function booktypedisplay(booktype, videolink) {
 
 function filelistformat(filelist) {
   let fstr = []
+  if (filelist === null) {filelist = ["No files"]} 
   for (let i=0; i<filelist.length; i++) {
     fstr.push(
       <div key={filelist[i]}>
