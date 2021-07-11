@@ -9,7 +9,12 @@ const AbstractBookInfo = (props) => {
 
   return(
     <div className="">
-      <h2>{datestring}</h2>
+      <div id="date">
+      {/* <h2> */}
+        {datestring}
+        {/* </h2> */}
+      </div>
+      
       <div className="docinfotoparea">
         <div>
           <img height="110" src={doctorinfo.Propic} alt="ProfilePic" />

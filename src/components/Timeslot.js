@@ -94,11 +94,11 @@ const Timeslot = (props) => {
           {/* Comfirm Cancel button */}
           <div className="buttonarea">
             {/* Confirm button */}
-            <button className="button" onClick={()=>{ confirmbooking(); close(); }}>
+            <button id="confirm" onClick={()=>{ confirmbooking(); close(); }}>
               Confirm
             </button>
             {/* Cancel button */}
-            <button className="button" onClick={close}>
+            <button id="cancel" onClick={close}>
               Cancel
             </button>
           </div>                
