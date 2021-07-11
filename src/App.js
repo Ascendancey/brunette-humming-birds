@@ -10,7 +10,7 @@ import DoctorDetail from "./pages/DoctorDetail";
 import Appointment from "./pages/Appointment";
 import BookingDetails from "./pages/BookingDetails";
 
-import Popup from 'reactjs-popup';
+import Popup from "reactjs-popup";
 
 const DUMMY_DATA = [
   {
@@ -78,70 +78,77 @@ const App = () => {
   return (
     <Router>
       <div className="App">
-        <div className="navBar">
-        <Link to="/home"><img className="userImage" src="../image/prodoctor_logo.png" />
-          </Link>
-          <div className="user">
-          <label className="helloUser">Hello, {dummy && dummy[0].name}</label>
+        {/* <div className="navBar-background"> */}
+          <div className="navBar">
+            <div className="user">
+            <Link to="/home">
+              <img className="logo" src="../image/logo.png" />
+            </Link>
+            </div>
+            
+            <div className="user">
+              <label className="helloUser">
+                Hello, {dummy && dummy[0].name}
+              </label>
 
-            <Popup
-                trigger={<div className="menu-item"> <img className="userImage" src="../image/caticon.png" /> </div>}
+              <Popup
+                trigger={
+                  <div className="menu-item">
+                    {" "}
+                    <img
+                      className="userImage"
+                      src="../image/caticon.png"
+                    />{" "}
+                  </div>
+                }
                 position="bottom right"
                 on="hover"
                 closeOnDocumentClick
                 mouseLeaveDelay={300}
                 mouseEnterDelay={0}
-                contentStyle={{ padding: '0px', border: 'none' }}
+                contentStyle={{ padding: "0px", border: "none" }}
                 arrow={false}
-
-            >
-              <div className="menu">
-                <div className="menu-item"> View profile</div>
-                <div className="menu-item"><Link to="/appointment"> My appointments</Link></div>
-                <div className="menu-item"> Settings</div>
-              </div>
-            </Popup>
-
+              >
+                <div className="menu">
+                  <div className="menu-item"> View profile</div>
+                  <div className="menu-item">
+                    <Link to="/appointment"> My appointments</Link>
+                  </div>
+                  <div className="menu-item"> Settings</div>
+                </div>
+              </Popup>
+            </div>
           </div>
-        </div>
-
-
-
-
-
-
-        {/* <div 
-        // className="App-content"
-        > */}
-          <Switch>
-            <Route path="/home">
-              <Home
-                dummy={dummy}
-                addSomeHandler={addSomeHandler}
-                searchHandler={searchHandler}
-              />
-            </Route>
-            <Route path="/rankinglist">
-              <RankingList
-                dummy={dummy}
-                addSomeHandler={addSomeHandler}
-                searchHandler={searchHandler}
-              />
-            </Route>
-            <Route path="/details">
-              <DoctorDetail />
-            </Route>
-            <Route path="/appointment">
-              <Appointment
-                storedappointments={storedappointments}
-                storeappfunc={storeappointments}
-              />
-            </Route>
-            <Route path="/bookingdetails">
-              <BookingDetails />
-            </Route>
-          </Switch>
         {/* </div> */}
+
+        <Switch>
+          <Route path="/home">
+            <Home
+              dummy={dummy}
+              addSomeHandler={addSomeHandler}
+              searchHandler={searchHandler}
+            />
+          </Route>
+          <Route path="/rankinglist">
+            <RankingList
+              dummy={dummy}
+              addSomeHandler={addSomeHandler}
+              searchHandler={searchHandler}
+            />
+          </Route>
+          <Route path="/details">
+            <DoctorDetail />
+          </Route>
+          <Route path="/appointment">
+            <Appointment
+              storedappointments={storedappointments}
+              storeappfunc={storeappointments}
+            />
+          </Route>
+          <Route path="/bookingdetails">
+            <BookingDetails />
+          </Route>
+        </Switch>
       </div>
     </Router>
   );

@@ -47,10 +47,13 @@
 }
 
 .navBar {
-  margin: 2rem auto;
+  /* margin: 2rem auto; */
+  height: 100px;
+  background-color: white;
   border-radius: 12px;
   display: flex;
   justify-content: space-evenly;
+  border-radius: 0;
 }
 
 .links {
@@ -70,13 +73,17 @@
   position: relative;
   /* align-self: flex-start; */
   /* justify-content: right; */
-  color: white;
+  color: #008cba;
 }
 
 .userImage {
   /* border-radius: 50%; */
   height: 30px;
   /*margin-left: 1rem; */
+}
+
+.logo {
+  height: 30px;
 }
 
 /* Media screen size */
