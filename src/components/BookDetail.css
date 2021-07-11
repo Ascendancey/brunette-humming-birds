@@ -1,0 +1,13 @@
+#placecenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.linkstyle {
+    color: blue;
+    text-decoration: underline;
+    width: 80%;
+    text-align: center;
+}
