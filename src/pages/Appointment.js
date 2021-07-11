@@ -65,13 +65,13 @@ const Appointment = (props) => {
   const [historyapplist, sethistoryapplist] = useState(appointmenttemplate)
 
   // Hard code notification for demo
-  const [notify, setnotify] = useState(0)
+  const [notimessage, setnotimessage] = useState(null)
 
   useEffect(() => {
     if (props.storedappointments !== null) {
       let updatelist = [... props.storedappointments]
       if (location.state) {        
-        updatelist.push(location.state)
+        updatelist.push(location.state)        
       }
       props.storeappfunc(updatelist)
       setapplist(updatelist)
@@ -79,10 +79,10 @@ const Appointment = (props) => {
     else {
       let updatelist = []
       if (location.state) {        
-        updatelist.push(location.state)        
-      }
-      props.storeappfunc(updatelist)
-      setapplist(updatelist)
+        updatelist.push(location.state)
+        props.storeappfunc(updatelist)
+        setapplist(updatelist)      
+      }      
     }
     // Hard code notification for demo
     if (location.state) {
@@ -92,7 +92,7 @@ const Appointment = (props) => {
       }
       const timer = setTimeout(() => {        
         //console.log("notification")
-        setnotify(1)
+        setnotimessage(formatDatestring(location.state.time))
       }, 3000);
       return () => clearTimeout(timer);
     }    
@@ -123,8 +123,8 @@ const Appointment = (props) => {
         {historyapplist !== null? appointmentlist(historyapplist, cancelbooking) : null}
       </div>
       {/* Hard code notification for demo */}
-      {notify == 1?
-        NotificationManager.info(formatDatestring(location.state.time), 'Appointment Reminder')
+      {notimessage !== null?
+        NotificationManager.info(notimessage, 'Appointment Reminder')
       : null}
       <NotificationContainer/>
     </div>
