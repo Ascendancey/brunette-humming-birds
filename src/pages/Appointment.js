@@ -145,7 +145,7 @@ function appointmentslot(data, cancelbooking) {
   return(
     <Popup key={data.time}
       trigger = {
-        <button className="abstactdoctor" >
+        <button className="abstactdoctor_apptlist" >
           <AbstractBookInfo date={data.time} info={data.doctorinfo} />
         </button>
       }
@@ -158,7 +158,7 @@ function appointmentslot(data, cancelbooking) {
               <BookDetail doctorinfo={data.doctorinfo} date={data.time} message={data.message} booktype={data.booktype} filename={data.filename} />
             </div>
           <div className="actions">
-            <button className="button" onClick={()=>{ cancelbooking(data.time); close(); }}>
+            <button id="cancel_wide" onClick={()=>{ cancelbooking(data.time); close(); }}>
               Cancel Booking
             </button>
           </div>

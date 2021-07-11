@@ -15,7 +15,7 @@ import Popup from "reactjs-popup";
 const DUMMY_DATA = [
   {
     id: 0,
-    name: "Dr. Oliver",
+    name: "Terry",
     propic: "image/DefaultDoctorProfileImage.jpg",
     specialization: "Cardiologist",
     language: ["English", "German"],

@@ -3,8 +3,8 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  height: 200px;
-  background-color: #091540;
+  height: 160px;
+  background-color: #378aae;
   color: white;
 }
 
@@ -31,10 +31,39 @@ h1 {
 }
 
 #date {
-  background-color: #091540;
+  padding-top: 16px;
+  background-color: #378aae;
   font-size: 26px;
   text-align: center;
   color: white;
   margin: 0;
   /* height: 100px; */
+}
+
+.abstactdoctor_apptlist {
+  display: flex;
+  flex-direction: row;
+  width:90%;
+  justify-content: space-around;
+  background-color: #378aae;
+  margin: 0.5rem auto;
+  border-radius: 8px;
+  border-color: white;
+  color: #008cba;
+}
+
+#cancel_wide {
+  transition-duration: 0.4s;
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  /* margin-left: 1rem; */
+  width: 100%;
+  /* position: relative;
+  right: 5%;
+  transform: translateX(-50%); */
 }
