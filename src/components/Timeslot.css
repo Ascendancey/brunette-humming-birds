@@ -24,21 +24,22 @@
 
 .modal {
     background-color: white;
+    width: 500px;
   }
   .modal > .header {
     width: 100%;
     border-bottom: 1px solid grey;
     font-size: 18px;
     text-align: center;
-    padding: 5px;
+    /* padding: 5px; */
   }
   .modal > .content {
     width: 100%;
-    padding: 10px 5px;
+    /* padding: 10px 5px; */
   }
   .modal > .actions {
     width: 100%;
-    padding: 10px 5px;
+    /* padding: 10px 5px; */
     margin: auto;
     text-align: center;
   }
@@ -46,7 +47,7 @@
     cursor: pointer;
     position: absolute;
     display: block;
-    padding: 2px 5px;
+    /* padding: 2px 5px; */
     line-height: 20px;
     right: -10px;
     top: -10px;
@@ -57,5 +58,45 @@
   }
 
 .buttonarea {
+  margin: 0;
   margin-top: 30px;
+}
+
+.header {
+  background-color: #091540;
+  color: white;
+}
+
+
+#confirm {
+  transition-duration: 0.4s;
+  background-color: green;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  /* margin-left: 1rem; */
+  width: 50%;
+  /* position: relative;
+  right: 5%;
+  transform: translateX(-50%); */
+}
+
+
+#cancel {
+  transition-duration: 0.4s;
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  /* margin-left: 1rem; */
+  width: 50%;
+  /* position: relative;
+  right: 5%;
+  transform: translateX(-50%); */
 }

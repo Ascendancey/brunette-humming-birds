@@ -6,9 +6,14 @@
   width: 40rem;
   margin-left: auto;
   margin-right: auto;
-  margin: 1rem auto;
+  margin: 3rem auto;
   border-radius: 12px;
   position: relative;
+  justify-content: space-between;
+}
+
+.SearchField {
+  
 }
 
 .SearchBar-input {
@@ -18,7 +23,7 @@
 }
 
 .SearchBar-button {
-  width: auto;
+  width: 20%;
   transition-duration: 0.4s;
   background-color: #008cba;
   border: none;
@@ -26,7 +31,6 @@
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
   font-size: 16px;
   margin-left: 1rem;
   /* position: relative;
@@ -43,6 +47,7 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 select {
@@ -57,4 +62,20 @@ select {
   margin: 0.5rem auto;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
+}
+
+.break {
+  flex-basis: 100%;
+  height: 0rem;
+}
+
+.bigreak {
+  flex-basis: 100%;
+  height: 1.5rem;
+}
+
+.showFilters {
+  /* flex-basis: 100%; */
+  height: 30px;
+  /*margin-left: 1rem; */
 }

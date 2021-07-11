@@ -8,12 +8,19 @@
   border-radius: 8px;
   border-color: white;
   color: #008cba;
+  align-items: center;
+  background-color: turquoise;
 }
 
 .propic {
   margin: 10px;
+  border-radius: 10px;
 }
 
 .ratingarea {
   margin: auto;
+}
+
+.doctorPic {
+  border-radius: 20px;
 }

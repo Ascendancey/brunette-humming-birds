@@ -9,7 +9,7 @@ const DoctorInfo = (props) => {
   const addstring = formataddress(infodata.Address)
 
   return (
-    <div>
+    <div className="doctorInfo">
       <div className="infotoparea">
         <div>
           <img height="200" src={infodata.Propic} alt="ProfilePic" />
@@ -29,7 +29,7 @@ const DoctorInfo = (props) => {
         </div>
       </div>        
       <div>
-         <p>{infodata.Selfintro}</p>
+         <p id="selfintro">{infodata.Selfintro}</p>
       </div>
     </div>
   );

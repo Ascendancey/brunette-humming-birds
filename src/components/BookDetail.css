@@ -3,6 +3,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #378aae;
+    color: white;
+    padding-bottom: 16px;
 }
 
 .linkstyle {
