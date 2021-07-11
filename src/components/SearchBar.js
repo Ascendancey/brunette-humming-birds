@@ -93,7 +93,7 @@ const SearchBar = (props) => {
       </button>
       {!isFilters && (
         // <button onClick={showFilters}>Show filters</button>
-        <img className="userImage" onClick={showFilters} src="../image/expand.png" />
+        <img className="userImage" onClick={showFilters} src="../image/expand_blue.png" />
       )}
       {isFilters && (
         <div className="SearchBar-filters">
@@ -132,7 +132,7 @@ const SearchBar = (props) => {
             })}
           </select>
           <br />
-          <img className="userImage" onClick={hideFilters} src="../image/expand_upside.png" />
+          <img className="userImage" onClick={hideFilters} src="../image/expand_blue_upsidedown.png" />
         </div>
       )}
 
