@@ -23,7 +23,7 @@ const RankingList = (props) => {
         "street": "Kaufingerstr",
         "house": "1a",
       },
-      "Selfintro": "Hello, I am Dr. Oliver. xxxxxxxxxx. xxxxxxxxxxxxxx. xxxxxxxxxxxxxxx. xxxxxxxxx.",
+      "Selfintro": "Hello, I am Dr. Oliver. xxxxxxxxxx. xxxxxxxxxxxxxx. xxxxxxxxxxxxxxx. xxxxxxxxx. Xxxxxxxxxxxxxxx. xxxxxxxxx. Xxxxxxxxxxxxxxx. xxxxxxxxx. Xxxxxxxxxxxxxxx. xxxxxxxxx. Xxxxxxxxxxxxxxx. xxxxxxxxx.",
       "Starnum": "4",
       "Reviewnum": "3",
       "Avastatus": 1
@@ -42,7 +42,7 @@ const RankingList = (props) => {
         "street": "Kaufingerstr",
         "house": "1a",
       },
-      "Selfintro": "Hello, I am Dr. Harry. xxxxxxxxxx. xxxxxxxxxxxxxx. xxxxxxxxxxxxxxx. xxxxxxxxx.",
+      "Selfintro": "Hello, I am Dr. Harry. xxxxxxxxxx. xxxxxxxxxxxxxx. xxxxxxxxxxxxxxx. xxxxxxxxx. xxxxxxxxxxxxxx. xxxxxxxxxxxxxxx. xxxxxxxxx. Xxxxxxxxxxxxxxx. xxxxxxxxx. Xxxxxxxxxxxxxxx. xxxxxxxxx. Xxxxxxxxxxxxxxx. xxxxxxxxx. Xxxxxxxxxxxxxxx. xxxxxxxxx.",
       "Starnum": "4",
       "Reviewnum": "3",
       "Avastatus": 0

@@ -29,7 +29,7 @@ const DoctorInfo = (props) => {
         </div>
       </div>        
       <div>
-         <p>{infodata.Selfintro}</p>
+         <p id="selfintro">{infodata.Selfintro}</p>
       </div>
     </div>
   );

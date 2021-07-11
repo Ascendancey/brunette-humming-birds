@@ -9,7 +9,7 @@ const Reviewsection = (props) => {
   const [reviewslot, setreviewslot] = useState(insertdata(infodata))
 
   return (
-    <div>
+    <div className="reviewSection">
       {reviewslot}
     </div>
   );
