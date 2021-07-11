@@ -54,7 +54,7 @@ const RankingList = (props) => {
   return (
     <div className="App-content">
         <SearchBar searchHandler={props.searchHandler} dummy={props.dummy}/>
-      <div>
+      <div id="RankingList">
         {/* <h1>Ranking list</h1> */}
         <div style={{display:"flex", flexDirection: "column", alignItems:"center"}}>
           {arrangelist(ranklist)}

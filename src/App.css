@@ -138,3 +138,7 @@ a {
   text-decoration: none;
   outline : none;
 }
+
+#RankingList {
+  padding-bottom: 24px;
+}
