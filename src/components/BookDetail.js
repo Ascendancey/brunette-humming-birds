@@ -9,7 +9,7 @@ const BookDetail = (props) => {
   const message= props.message
   const booktype= props.booktype
   const filename = props.filename
-  const videolink = "https://lmu-munich.zoom.us/j/4617004849?pwd=NjN4TXYveUt6U0s4bGo5Y2FiUEV6Zz09"
+  const videolink = "https://meet.google.com/xze-ubny-bhr"
   const booktext = booktypedisplay(booktype, videolink)
 
   return(
